@@ -3,7 +3,6 @@ Discordowy klient serwisu odrabiamy.pl
 
 został stworzony na bazie:
  - [doteq/odrabiamy-bot](https://github.com/doteq/odrabiamy-bot)
- oraz
  - [m1chaelbarry/odrabiamy-bot](https://github.com/m1chaelbarry/odrabiamy-bot)
 
 ## Konfiguracja BOT'a
