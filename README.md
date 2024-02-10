@@ -1,16 +1,34 @@
-# odrabiamy-bot
-odrabiamy-bot to Discordowy klient serwisu odrabiamy.pl
+# OdrabiamyBOT
+Discordowy klient serwisu odrabiamy.pl
 
-na bazie [doteq/odrabiamy-bot](https://github.com/doteq/odrabiamy-bot)
+został stworzony na bazie:
+ - [doteq/odrabiamy-bot](https://github.com/doteq/odrabiamy-bot)
+ oraz
+ - [m1chaelbarry/odrabiamy-bot](https://github.com/m1chaelbarry/odrabiamy-bot)
 
-## Użycie
-Skonfiguruj bota w pliku [`src/config.ts`](src/config.ts) i uruchom:
+## Konfiguracja BOT'a
+Konfiguracja BOT'a znajduję się w pliku [`src/config.ts`](src/config.ts).
+Powinna wyglądać tak:
+```
+export default {
+    token: 'token-twojego-bota', // Discord BOT Token (znajdziesz go na tej stronie: https://discord.com/developers/applications/)
+    channels: 'id-serwera', // Guild ID
+    odrabiamyAuth: 'token-odrabiamy', // Odrabiamy.pl API v2 Auth token
+    clientID: 'id-twojego-bota' // Client ID  (znajdziesz go na tej stronie: https://discord.com/developers/applications/)
+}
+```
+
+# Uruchomienie BOT'a
 ```bash
 $ npm install
 $ npm run build
 $ node ./dist/main.js
 ```
-Po poprawnym skonfigurowaniu i uruchomieniu bota wystarczy wysłać adres url zadania na kanał podany wcześniej w pliku config, a bot odeśle pełne rozwiązanie. Możesz też napisać ``!str`` przed adresem url żeby bot odesłał rozwiązania z całej strony oraz ``!split`` żeby wysłać każdy podpunkt osobno.
+> Pamiętaj że po każdej zmianie w plikach bota należy wpisać ```npm run build```.
+
+# Informacja
+Po poprawnym skonfigurowaniu bota, powinny działać komendy (/) oraz bot powinien wysyłać zadania.
+Jeżeli masz jakiś problem, skontaktuj się ze mną na Discordzie: ```zlyyy```
 
 ## Ostrzeżenie
 Korzystanie z API serwisu odrabiamy.pl przez zewnętrzne programy jest możliwe wyłącznie za zgodą administracji. Użytkownik bierze na siebie całą odpowiedzialność przy korzystaniu z projektu.
